@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WalidStyle - Premium Fashion & Clothing Store. Shop the latest trends in hoodies, t-shirts, jeans and accessories.">
+    <title>WalidStyle - Premium Fashion & Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Popup -->
+    <div id="welcomePopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <h2>Welcome to WalidStyle!</h2>
+            <p>Get 20% off your first order</p>
+            <form class="popup-form" onsubmit="handlePopupSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Get Discount</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <h1>WalidStyle</h1>
+                    </div>
+
+                    <div class="search-bar">
+                        <form onsubmit="handleSearch(event)">
+                            <input type="text" id="searchInput" placeholder="Search products...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#categories" class="nav-link">Categories</a></li>
+                        <li><a href="#products" class="nav-link">Products</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1920&h=1080&fit=crop" alt="Fashion Collection">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&h=1080&fit=crop" alt="Trendy Clothing">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop" alt="Style Fashion">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your Style</h1>
+                <p class="hero-subtitle">Premium fashion collection for the modern lifestyle</p>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>2-3 days shipping worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Money Back</h3>
+                    <p>30-day return guarantee</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Quality Guarantee</h3>
+                    <p>Premium materials only</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=400&fit=crop" alt="Hoodies">
+                    <div class="category-overlay">
+                        <h3>Hoodies</h3>
+                        <a href="#products" class="btn btn-secondary">Explore</a>
+                    </div>
+                    <div class="category-title">
+                        <h3>Hoodies</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop" alt="T-Shirts">
+                    <div class="category-overlay">
+                        <h3>T-Shirts</h3>
+                        <a href="#products" class="btn btn-secondary">Explore</a>
+                    </div>
+                    <div class="category-title">
+                        <h3>T-Shirts</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&h=400&fit=crop" alt="Jeans">
+                    <div class="category-overlay">
+                        <h3>Jeans</h3>
+                        <a href="#products" class="btn btn-secondary">Explore</a>
+                    </div>
+                    <div class="category-title">
+                        <h3>Jeans</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=600&h=400&fit=crop" alt="Accessories">
+                    <div class="category-overlay">
+                        <h3>Accessories</h3>
+                        <a href="#products" class="btn btn-secondary">Explore</a>
+                    </div>
+                    <div class="category-title">
+                        <h3>Accessories</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=400&h=500&fit=crop" alt="Classic Hoodie">
+                    <div class="product-info">
+                        <h3>Classic Hoodie</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">$49.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop" alt="Premium T-Shirt">
+                    <div class="product-info">
+                        <h3>Premium T-Shirt</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <p class="product-price">$29.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop" alt="Slim Fit Jeans">
+                    <div class="product-info">
+                        <h3>Slim Fit Jeans</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <p class="product-price">$79.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=500&fit=crop" alt="Oversized Hoodie">
+                    <div class="product-info">
+                        <h3>Oversized Hoodie</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <p class="product-price">$54.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=500&fit=crop" alt="Designer T-Shirt">
+                    <div class="product-info">
+                        <h3>Designer T-Shirt</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <p class="product-price">$34.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop" alt="Casual Jacket">
+                    <div class="product-info">
+                        <h3>Casual Jacket</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <p class="product-price">$89.99</p>
+                        <button class="btn btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About WalidStyle</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>WalidStyle is your destination for premium fashion and contemporary streetwear. We curate the finest selection of clothing and accessories to help you express your unique style.</p>
+                    <p>Founded with a passion for quality and style, we're committed to bringing you the latest trends combined with timeless classics. Every piece in our collection is carefully selected to ensure the highest standards of quality and comfort.</p>
+                </div>
+                <div class="about-icons">
+                    <div class="about-icon-card">
+                        <i class="fas fa-award"></i>
+                        <h4>Premium Quality</h4>
+                    </div>
+                    <div class="about-icon-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Worldwide Shipping</h4>
+                    </div>
+                    <div class="about-icon-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure Shopping</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Johnson" class="testimonial-image">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Classic Hoodie is absolutely amazing! The quality is top-notch and it fits perfectly. Best purchase I've made this year!"</p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Johnson</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Mike Chen" class="testimonial-image">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I ordered the Premium T-Shirt and it exceeded my expectations. The fabric is so soft and the design is stylish. Will definitely order again!"</p>
+                    <div class="testimonial-author">
+                        <h4>Mike Chen</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emma Williams" class="testimonial-image">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Great quality jeans at a reasonable price. Shipping was fast and the customer service was excellent. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <h4>Emma Williams</h4>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive offers and updates delivered to your inbox</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WalidStyle</h3>
+                    <p>Premium fashion for the modern lifestyle. Quality you can trust, style you can love.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@walidstyle.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion St, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WalidStyle. All rights reserved. | Designed with passion for fashion</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
