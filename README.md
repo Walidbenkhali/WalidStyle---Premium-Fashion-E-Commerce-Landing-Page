@@ -160,7 +160,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Walid**
+**Walid Ben Khali**
 - Landing Page: WalidStyle
 - Version: 1.0.0
 - Year: 2025
